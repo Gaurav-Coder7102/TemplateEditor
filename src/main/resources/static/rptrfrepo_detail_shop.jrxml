@@ -1,0 +1,1197 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  --><jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" bottomMargin="5" columnWidth="546" language="groovy" leftMargin="36" name="rptrfrepo_detail_shop" pageHeight="900" pageWidth="595" resourceBundle="rptrfrepo_detail_shop_en" rightMargin="13" topMargin="15" uuid="612a0ad1-e6bb-4a66-8dd4-6d1c1c568303" whenNoDataType="NoPages" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd">
+                	
+    
+    
+    
+    <property name="ireport.zoom" value="1.0000000000000104"/>
+                	
+    
+    
+    
+    <property name="ireport.x" value="0"/>
+                	
+    
+    
+    
+    <property name="ireport.y" value="89"/>
+                	
+    
+    
+    
+    <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+                	
+    
+    
+    
+    <property name="com.jaspersoft.studio.unit." value="pixel"/>
+                	
+    
+    
+    
+    <property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+                	
+    
+    
+    
+    <property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+                	
+    
+    
+    
+    <property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+                	
+    
+    
+    
+    <property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+                	
+    
+    
+    
+    <property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+                	
+    
+    
+    
+    <property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+                	
+    
+    
+    
+    <property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+                	
+    
+    
+    
+    <property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+                	
+    
+    
+    
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="rpt_rfrepo_sss"/>
+                	
+    
+    
+    
+    <template><![CDATA[$P{STYLE_NAME}]]></template>
+                	
+    
+    
+    
+    <parameter class="java.util.Date" name="P_CURDT"/>
+                	
+    
+    
+    
+    <parameter class="java.lang.String" name="P_USERSTR"/>
+                	
+    
+    
+    
+    <parameter class="java.lang.String" name="P_DEVSTR"/>
+                	
+    
+    
+    
+    <parameter class="java.lang.String" name="STYLE_NAME"/>
+                	
+    
+    
+    
+    <parameter class="java.lang.String" name="P_FDATE"/>
+                	
+    
+    
+    
+    <parameter class="java.lang.String" name="P_TDATE"/>
+                	
+    
+    
+    
+    <parameter class="java.lang.String" name="G_BANK_NAME"/>
+                	
+    
+    
+    
+    <parameter class="java.lang.String" name="G_REGNO"/>
+                	
+    
+    
+    
+    <parameter class="java.lang.String" name="P_BRANCHNAME"/>
+                	
+    
+    
+    
+    <queryString>
+		<![CDATA[SELECT SH.SHOP_DATE,
+                                   IT.ITEM_NAME,
+                                   SH.CUST_NAME,
+                                   SH.MOBILE_NO,
+                                   SH.MINOR,
+                                   SH.QUNTITY,
+                                   SH.PAY_AMOUNT,
+                                   SH.STATE
+                            FROM
+                                   ITEMMAS_SSS IT,SHOPMAS_SSS SH
+                            WHERE
+                                   SH.ITEM_ID=IT.ITEM_ID]]>
+	</queryString>
+                	
+    
+    
+    
+    <field class="java.sql.Timestamp" name="SHOP_DATE">
+                                		
+        
+        
+        
+        <property name="com.jaspersoft.studio.field.label" value="SHOP_DATE"/>
+                                	
+    
+    
+    
+    </field>
+                	
+    
+    
+    
+    <field class="java.lang.String" name="ITEM_NAME">
+                                		
+        
+        
+        
+        <property name="com.jaspersoft.studio.field.label" value="ITEM_NAME"/>
+                                	
+    
+    
+    
+    </field>
+                	
+    
+    
+    
+    <field class="java.lang.String" name="CUST_NAME">
+                                		
+        
+        
+        
+        <property name="com.jaspersoft.studio.field.label" value="CUST_NAME"/>
+                                	
+    
+    
+    
+    </field>
+                	
+    
+    
+    
+    <field class="java.math.BigDecimal" name="MOBILE_NO">
+                                		
+        
+        
+        
+        <property name="com.jaspersoft.studio.field.label" value="MOBILE_NO"/>
+                                	
+    
+    
+    
+    </field>
+                	
+    
+    
+    
+    <field class="java.lang.String" name="MINOR">
+                                		
+        
+        
+        
+        <property name="com.jaspersoft.studio.field.label" value="MINOR"/>
+                                	
+    
+    
+    
+    </field>
+                	
+    
+    
+    
+    <field class="java.math.BigDecimal" name="QUNTITY">
+                                		
+        
+        
+        
+        <property name="com.jaspersoft.studio.field.label" value="QUNTITY"/>
+                                	
+    
+    
+    
+    </field>
+                	
+    
+    
+    
+    <field class="java.math.BigDecimal" name="PAY_AMOUNT">
+                                		
+        
+        
+        
+        <property name="com.jaspersoft.studio.field.label" value="PAY_AMOUNT"/>
+                                	
+    
+    
+    
+    </field>
+                	
+    
+    
+    
+    <field class="java.lang.String" name="STATE">
+                                		
+        
+        
+        
+        <property name="com.jaspersoft.studio.field.label" value="STATE"/>
+                                	
+    
+    
+    
+    </field>
+                	
+	
+    
+    
+    
+    <background>
+                                		
+        
+        
+        
+        <band splitType="Stretch"/>
+                                	
+    
+    
+    
+    </background>
+                	
+    
+    
+    
+    <pageHeader>
+                                		
+        
+        
+        
+        <band height="115" splitType="Stretch">
+                                                			
+            
+            
+            
+            <printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
+                                                			
+            
+            
+            
+            <textField isBlankWhenNull="true" isStretchWithOverflow="true">
+                                                                				
+                
+                
+                
+                <reportElement height="20" isPrintWhenDetailOverflows="true" isRemoveLineWhenBlank="true" style="ReportTitle_14" uuid="3327b14f-4f9c-45a7-bed5-fbe56be44655" width="289" x="121" y="80">
+                                                                                					
+                    
+                    
+                    
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                                                                                					
+                    
+                    
+                    
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                                                                                				
+                
+                
+                
+                </reportElement>
+                                                                				
+                
+                
+                
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                                                				
+                
+                
+                
+                <textFieldExpression><![CDATA[$R{rptrfrepo_detail_shop.lbltitle}]]></textFieldExpression>
+                                                                			
+            
+            
+            
+            </textField>
+                                                			
+            
+            
+            
+            <textField isBlankWhenNull="true" isStretchWithOverflow="true">
+                                                                				
+                
+                
+                
+                <reportElement height="15" isPrintWhenDetailOverflows="true" isRemoveLineWhenBlank="true" style="ReportFieldLabel" uuid="b678b328-c408-44c9-a17c-9617d2e5960a" width="70" x="130" y="100">
+                                                                                					
+                    
+                    
+                    
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                                                                                				
+                
+                
+                
+                </reportElement>
+                                                                				
+                
+                
+                
+                <textElement textAlignment="Right" verticalAlignment="Middle"/>
+                                                                				
+                
+                
+                
+                <textFieldExpression><![CDATA[$R{rptrfrepo_detail_shop.lblfrmd}]]></textFieldExpression>
+                                                                			
+            
+            
+            
+            </textField>
+                                                			
+            
+            
+            
+            <textField isBlankWhenNull="true" isStretchWithOverflow="true" pattern="dd/MM/yyyy">
+                                                                				
+                
+                
+                
+                <reportElement height="15" isPrintWhenDetailOverflows="true" isRemoveLineWhenBlank="true" style="ReportField_8" uuid="5dea1b98-b5ec-4094-894c-a612d1ec713e" width="70" x="200" y="100">
+                                                                                					
+                    
+                    
+                    
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                                                                                				
+                
+                
+                
+                </reportElement>
+                                                                				
+                
+                
+                
+                <textElement textAlignment="Left" verticalAlignment="Middle"/>
+                                                                				
+                
+                
+                
+                <textFieldExpression><![CDATA[$P{P_FDATE}]]></textFieldExpression>
+                                                                			
+            
+            
+            
+            </textField>
+                                                			
+            
+            
+            
+            <textField isBlankWhenNull="true" isStretchWithOverflow="true">
+                                                                				
+                
+                
+                
+                <reportElement height="15" isPrintWhenDetailOverflows="true" isRemoveLineWhenBlank="true" style="ReportFieldLabel" uuid="773161e1-4a6b-4ac1-854d-93ad17901732" width="70" x="270" y="100">
+                                                                                					
+                    
+                    
+                    
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                                                                                				
+                
+                
+                
+                </reportElement>
+                                                                				
+                
+                
+                
+                <textElement textAlignment="Right" verticalAlignment="Middle"/>
+                                                                				
+                
+                
+                
+                <textFieldExpression><![CDATA[$R{rptrfrepo_detail_shop.lbltod}]]></textFieldExpression>
+                                                                			
+            
+            
+            
+            </textField>
+                                                			
+            
+            
+            
+            <textField isBlankWhenNull="true" isStretchWithOverflow="true" pattern="dd/MM/yyyy">
+                                                                				
+                
+                
+                
+                <reportElement height="15" isPrintWhenDetailOverflows="true" isRemoveLineWhenBlank="true" style="ReportField_8" uuid="f88926b0-6f80-4a95-bc1d-9279ac3e166c" width="70" x="340" y="100">
+                                                                                					
+                    
+                    
+                    
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                                                                                				
+                
+                
+                
+                </reportElement>
+                                                                				
+                
+                
+                
+                <textElement textAlignment="Left" verticalAlignment="Middle"/>
+                                                                				
+                
+                
+                
+                <textFieldExpression><![CDATA[$P{P_TDATE}]]></textFieldExpression>
+                                                                			
+            
+            
+            
+            </textField>
+                                                			
+            
+            
+            
+            <textField isBlankWhenNull="true" isStretchWithOverflow="true">
+                                                                				
+                
+                
+                
+                <reportElement height="15" isPrintWhenDetailOverflows="true" isRemoveLineWhenBlank="true" style="ReportFieldLabel" uuid="25b9ecb5-3aa5-4185-83c3-6405bf134205" width="82" x="410" y="83">
+                                                                                					
+                    
+                    
+                    
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                                                                                				
+                
+                
+                
+                </reportElement>
+                                                                				
+                
+                
+                
+                <textElement textAlignment="Right" verticalAlignment="Middle"/>
+                                                                				
+                
+                
+                
+                <textFieldExpression><![CDATA[$R{rptrfrepo_detail_shop.lblDate}]]></textFieldExpression>
+                                                                			
+            
+            
+            
+            </textField>
+                                                			
+            
+            
+            
+            <textField isBlankWhenNull="true" isStretchWithOverflow="true" pattern="dd/MM/yyyy">
+                                                                				
+                
+                
+                
+                <reportElement height="15" isPrintWhenDetailOverflows="true" isRemoveLineWhenBlank="true" style="ReportField_8" uuid="35b97f95-5b05-49df-bde8-196b4e79d20e" width="48" x="492" y="83">
+                                                                                					
+                    
+                    
+                    
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                                                                                					
+                    
+                    
+                    
+                    <property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+                                                                                				
+                
+                
+                
+                </reportElement>
+                                                                				
+                
+                
+                
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                                                                                					
+                    
+                    
+                    
+                    <paragraph rightIndent="2"/>
+                                                                                				
+                
+                
+                
+                </textElement>
+                                                                				
+                
+                
+                
+                <textFieldExpression><![CDATA[$P{P_CURDT}]]></textFieldExpression>
+                                                                			
+            
+            
+            
+            </textField>
+                                                			
+            
+            
+            
+            <frame>
+                                                                				
+                
+                
+                
+                <reportElement backcolor="#BFEAFF" height="80" mode="Opaque" uuid="e4a1afe4-a6cf-42fb-ae11-b1db76523fb3" width="540" x="0" y="0">
+                                                                                					
+                    
+                    
+                    
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                                                                                				
+                
+                
+                
+                </reportElement>
+                                                                				
+                
+                
+                
+                <box>
+                                                                                					
+                    
+                    
+                    
+                    <topPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                                                                                					
+                    
+                    
+                    
+                    <leftPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                                                                                					
+                    
+                    
+                    
+                    <bottomPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                                                                                					
+                    
+                    
+                    
+                    <rightPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                                                                                				
+                
+                
+                
+                </box>
+                                                                				
+                
+                
+                
+                <textField isBlankWhenNull="true" isStretchWithOverflow="true">
+                                                                                					
+                    
+                    
+                    
+                    <reportElement height="20" isPrintRepeatedValues="false" isPrintWhenDetailOverflows="true" isRemoveLineWhenBlank="true" key="" style="BankDetLable" uuid="452f6748-ee04-4a7e-8d69-a12d0418709f" width="376" x="74" y="43">
+                                                                                                						
+                        
+                        
+                        
+                        <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                                                                                                						
+                        
+                        
+                        
+                        <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                                                                                                					
+                    
+                    
+                    
+                    </reportElement>
+                                                                                					
+                    
+                    
+                    
+                    <textElement textAlignment="Center" verticalAlignment="Middle">
+                                                                                                						
+                        
+                        
+                        
+                        <font size="12"/>
+                                                                                                					
+                    
+                    
+                    
+                    </textElement>
+                                                                                					
+                    
+                    
+                    
+                    <textFieldExpression><![CDATA[$R{rptrfrepo_detail_shop.lblregno}+" "+$P{G_REGNO}]]></textFieldExpression>
+                                                                                				
+                
+                
+                
+                </textField>
+                                                                				
+                
+                
+                
+                <textField isBlankWhenNull="true" isStretchWithOverflow="true">
+                                                                                					
+                    
+                    
+                    
+                    <reportElement height="42" isPrintRepeatedValues="false" isPrintWhenDetailOverflows="true" isRemoveLineWhenBlank="true" style="BankDetLable" uuid="a91db44f-fada-435e-a1f1-eb4f3e98868e" width="376" x="74" y="1">
+                                                                                                						
+                        
+                        
+                        
+                        <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                                                                                                					
+                    
+                    
+                    
+                    </reportElement>
+                                                                                					
+                    
+                    
+                    
+                    <textElement textAlignment="Center" verticalAlignment="Middle">
+                                                                                                						
+                        
+                        
+                        
+                        <font isBold="true" size="18"/>
+                                                                                                					
+                    
+                    
+                    
+                    </textElement>
+                                                                                					
+                    
+                    
+                    
+                    <textFieldExpression><![CDATA[$P{G_BANK_NAME}]]></textFieldExpression>
+                                                                                				
+                
+                
+                
+                </textField>
+                                                                				
+                
+                
+                
+                <textField isBlankWhenNull="true" isStretchWithOverflow="true">
+                                                                                					
+                    
+                    
+                    
+                    <reportElement height="15" isPrintRepeatedValues="false" isPrintWhenDetailOverflows="true" isRemoveLineWhenBlank="true" key="" style="BankDetLable" uuid="f4c84974-416d-436e-bc5a-ba1c1ca0df45" width="376" x="74" y="63">
+                                                                                                						
+                        
+                        
+                        
+                        <property name="com.jaspersoft.studio.unit.x" value="px"/>
+                                                                                                						
+                        
+                        
+                        
+                        <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                                                                                                					
+                    
+                    
+                    
+                    </reportElement>
+                                                                                					
+                    
+                    
+                    
+                    <textElement textAlignment="Center" verticalAlignment="Middle">
+                                                                                                						
+                        
+                        
+                        
+                        <font size="9"/>
+                                                                                                					
+                    
+                    
+                    
+                    </textElement>
+                                                                                					
+                    
+                    
+                    
+                    <textFieldExpression><![CDATA[$R{rptrfrepo_detail_shop.lblbrnnm}  +" "+$P{P_BRANCHNAME}]]></textFieldExpression>
+                                                                                				
+                
+                
+                
+                </textField>
+                                                                			
+            
+            
+            
+            </frame>
+                                                		
+        
+        
+        
+        </band>
+                                	
+    
+    
+    
+    </pageHeader>
+    <columnHeader>
+        <band height="15">
+            <textField isBlankWhenNull="true" isStretchWithOverflow="true">
+                <reportElement backcolor="#80D5FF" height="15" isPrintWhenDetailOverflows="true" isRemoveLineWhenBlank="true" mode="Opaque" stretchType="ContainerHeight" style="ReportFieldLabel_9" uuid="4da2ea77-4a0d-4f39-90e4-c47dee9c3f76" width="80" x="0" y="0"/>
+                <box>
+                    <topPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                    <leftPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                    <bottomPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                    <rightPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA["SHOP_DATE"]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true" isStretchWithOverflow="true">
+                <reportElement backcolor="#80D5FF" height="15" isPrintWhenDetailOverflows="true" isRemoveLineWhenBlank="true" mode="Opaque" stretchType="ContainerHeight" style="ReportFieldLabel_9" uuid="ffea718c-6097-4178-9de7-ed5ea7d79c27" width="131" x="80" y="0"/>
+                <box>
+                    <topPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                    <leftPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                    <bottomPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                    <rightPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA["ITEM_NAME"]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true" isStretchWithOverflow="true">
+                <reportElement backcolor="#80D5FF" height="15" isPrintWhenDetailOverflows="true" isRemoveLineWhenBlank="true" mode="Opaque" stretchType="ContainerHeight" style="ReportFieldLabel_9" uuid="28b60ebb-10c3-447b-a4f4-8c68985e6793" width="161" x="211" y="0"/>
+                <box>
+                    <topPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                    <leftPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                    <bottomPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                    <rightPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA["CUST_NAME"]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true" isStretchWithOverflow="true">
+                <reportElement backcolor="#80D5FF" height="15" isPrintWhenDetailOverflows="true" isRemoveLineWhenBlank="true" mode="Opaque" stretchType="ContainerHeight" style="ReportFieldLabel_9" uuid="2f60b5a2-77ec-4060-b226-ba7ad14b917e" width="71" x="372" y="0"/>
+                <box>
+                    <topPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                    <leftPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                    <bottomPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                    <rightPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA["MOBILE_NO"]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true" isStretchWithOverflow="true">
+                <reportElement backcolor="#80D5FF" height="15" isPrintWhenDetailOverflows="true" isRemoveLineWhenBlank="true" mode="Opaque" stretchType="ContainerHeight" style="ReportFieldLabel_9" uuid="fee0c448-f375-41aa-ac99-2f06de94b12f" width="94" x="443" y="0"/>
+                <box>
+                    <topPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                    <leftPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                    <bottomPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                    <rightPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA["STATE"]]></textFieldExpression>
+            </textField>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="15">
+            <textField isBlankWhenNull="true" isStretchWithOverflow="true">
+                <reportElement height="15" mode="Opaque" uuid="51694d1a-0c5b-45d8-9b51-e5f7dc561460" width="80" x="0" y="0"/>
+                <box>
+                    <topPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                    <leftPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                    <bottomPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                    <rightPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Left" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{SHOP_DATE}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true" isStretchWithOverflow="true">
+                <reportElement height="15" mode="Opaque" uuid="3624a0a9-f8ff-45fa-87cc-f045065e9d10" width="131" x="80" y="0"/>
+                <box>
+                    <topPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                    <leftPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                    <bottomPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                    <rightPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Left" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{ITEM_NAME}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true" isStretchWithOverflow="true">
+                <reportElement height="15" mode="Opaque" uuid="b5ba9822-4cd8-4844-8a2c-e537e3ead2af" width="161" x="211" y="0"/>
+                <box>
+                    <topPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                    <leftPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                    <bottomPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                    <rightPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Left" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{CUST_NAME}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true" isStretchWithOverflow="true">
+                <reportElement height="15" mode="Opaque" uuid="22b52051-9ace-449a-b38e-920cc0af7911" width="71" x="372" y="0"/>
+                <box>
+                    <topPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                    <leftPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                    <bottomPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                    <rightPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Left" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{MOBILE_NO}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true" isStretchWithOverflow="true">
+                <reportElement height="15" mode="Opaque" uuid="6f1f7b7b-0d78-42df-bd94-77444f938bb8" width="94" x="443" y="0"/>
+                <box>
+                    <topPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                    <leftPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                    <bottomPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                    <rightPen lineColor="#000000" lineStyle="Solid" lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Left" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{STATE}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+        
+    
+        
+    
+        
+    
+    	
+	
+	
+    
+    
+    
+    <pageFooter>
+                                		
+        
+        
+        
+        <band height="15" splitType="Stretch">
+                                                			
+            
+            
+            
+            <textField isBlankWhenNull="true" isStretchWithOverflow="true" pattern="">
+                                                                				
+                
+                
+                
+                <reportElement height="15" isPrintWhenDetailOverflows="true" isRemoveLineWhenBlank="true" style="ReportField_8" uuid="ed05b6f7-39ee-4389-aa99-77eccd71449e" width="180" x="0" y="0"/>
+                                                                				
+                
+                
+                
+                <box>
+                                                                                					
+                    
+                    
+                    
+                    <topPen lineColor="#000000" lineStyle="Solid" lineWidth="0.0"/>
+                                                                                					
+                    
+                    
+                    
+                    <leftPen lineColor="#000000" lineStyle="Solid" lineWidth="0.0"/>
+                                                                                					
+                    
+                    
+                    
+                    <bottomPen lineColor="#000000" lineStyle="Solid" lineWidth="0.0"/>
+                                                                                					
+                    
+                    
+                    
+                    <rightPen lineColor="#000000" lineStyle="Solid" lineWidth="0.0"/>
+                                                                                				
+                
+                
+                
+                </box>
+                                                                				
+                
+                
+                
+                <textElement textAlignment="Left" verticalAlignment="Middle"/>
+                                                                				
+                
+                
+                
+                <textFieldExpression><![CDATA[$P{P_DEVSTR}]]></textFieldExpression>
+                                                                			
+            
+            
+            
+            </textField>
+                                                			
+            
+            
+            
+            <textField isBlankWhenNull="true" isStretchWithOverflow="true">
+                                                                				
+                
+                
+                
+                <reportElement height="15" isPrintWhenDetailOverflows="true" isRemoveLineWhenBlank="true" style="ReportField_8" uuid="c6ab407e-9d75-4db8-bc23-302641074876" width="87" x="422" y="0">
+                                                                                					
+                    
+                    
+                    
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                                                                                				
+                
+                
+                
+                </reportElement>
+                                                                				
+                
+                
+                
+                <box>
+                                                                                					
+                    
+                    
+                    
+                    <topPen lineColor="#000000" lineStyle="Solid" lineWidth="0.0"/>
+                                                                                					
+                    
+                    
+                    
+                    <leftPen lineColor="#000000" lineStyle="Solid" lineWidth="0.0"/>
+                                                                                					
+                    
+                    
+                    
+                    <bottomPen lineColor="#000000" lineStyle="Solid" lineWidth="0.0"/>
+                                                                                					
+                    
+                    
+                    
+                    <rightPen lineColor="#000000" lineStyle="Solid" lineWidth="0.0"/>
+                                                                                				
+                
+                
+                
+                </box>
+                                                                				
+                
+                
+                
+                <textElement textAlignment="Right" verticalAlignment="Middle"/>
+                                                                				
+                
+                
+                
+                <textFieldExpression><![CDATA[$R{rptrfrepo_detail_shop.lblpage}]]></textFieldExpression>
+                                                                			
+            
+            
+            
+            </textField>
+                                                			
+            
+            
+            
+            <textField isBlankWhenNull="true" isStretchWithOverflow="true" pattern="">
+                                                                				
+                
+                
+                
+                <reportElement height="15" isPrintWhenDetailOverflows="true" isRemoveLineWhenBlank="true" style="ReportField_8" uuid="3c51bfa0-cc27-42b6-8c45-5cb8051431c1" width="242" x="180" y="0"/>
+                                                                				
+                
+                
+                
+                <box>
+                                                                                					
+                    
+                    
+                    
+                    <topPen lineColor="#000000" lineStyle="Solid" lineWidth="0.0"/>
+                                                                                					
+                    
+                    
+                    
+                    <leftPen lineColor="#000000" lineStyle="Solid" lineWidth="0.0"/>
+                                                                                					
+                    
+                    
+                    
+                    <bottomPen lineColor="#000000" lineStyle="Solid" lineWidth="0.0"/>
+                                                                                					
+                    
+                    
+                    
+                    <rightPen lineColor="#000000" lineStyle="Solid" lineWidth="0.0"/>
+                                                                                				
+                
+                
+                
+                </box>
+                                                                				
+                
+                
+                
+                <textElement textAlignment="Right" verticalAlignment="Middle"/>
+                                                                				
+                
+                
+                
+                <textFieldExpression><![CDATA[$P{P_USERSTR}]]></textFieldExpression>
+                                                                			
+            
+            
+            
+            </textField>
+                                                			
+            
+            
+            
+            <textField>
+                                                                				
+                
+                
+                
+                <reportElement height="15" uuid="d3cf8c43-f2f6-431e-bf1f-f017c0f3a00e" width="13" x="509" y="0"/>
+                                                                				
+                
+                
+                
+                <textElement textAlignment="Right" verticalAlignment="Middle"/>
+                                                                				
+                
+                
+                
+                <textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+                                                                			
+            
+            
+            
+            </textField>
+                                                			
+            
+            
+            
+            <textField evaluationTime="Report">
+                                                                				
+                
+                
+                
+                <reportElement height="15" uuid="b1296482-ac0c-455d-a4e8-973c5a69efb1" width="13" x="532" y="0">
+                                                                                					
+                    
+                    
+                    
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                                                                                					
+                    
+                    
+                    
+                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
+                                                                                				
+                
+                
+                
+                </reportElement>
+                                                                				
+                
+                
+                
+                <textElement textAlignment="Left" verticalAlignment="Middle"/>
+                                                                				
+                
+                
+                
+                <textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+                                                                			
+            
+            
+            
+            </textField>
+                                                			
+            
+            
+            
+            <textField>
+                                                                				
+                
+                
+                
+                <reportElement height="15" uuid="ff29fa5c-2ad1-475a-b291-ab11145c57ac" width="10" x="522" y="0"/>
+                                                                				
+                
+                
+                
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                                                				
+                
+                
+                
+                <textFieldExpression><![CDATA["/"]]></textFieldExpression>
+                                                                			
+            
+            
+            
+            </textField>
+                                                		
+        
+        
+        
+        </band>
+                                	
+    
+    
+    
+    </pageFooter>
+                	
+    
+    
+    
+    <summary>
+                                		
+        
+        
+        
+        <band height="49"/>
+                                	
+    
+    
+    
+    </summary>
+                
+
+
+
+</jasperReport>

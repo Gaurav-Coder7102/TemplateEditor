@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Select Fields for Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #343a40;
+        }
+        .scrollable-table {
+            max-height: 400px;
+            overflow-y: auto;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+        th {
+            background-color: #343a40;
+            color: #ffffff;
+            position: sticky;
+            top: 0;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        input[type="text"], select {
+            width: 90%;
+            padding: 5px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="checkbox"] {
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Select Fields for Report</h1>
+    <form action="/generate-report" method="POST">
+        <div class="scrollable-table">
+            <table>
+                <tr>
+                    <th>Fields</th>
+                    <th>Type</th>
+                    <th>Width</th>
+                    <th>Select</th>
+                </tr>
+                <tr>
+                    <td>Shop Date</td>
+                    <td>
+                        <select name="type_SHOP_DATE">
+                            <option value="String">String</option>
+                            <option value="Integer">Integer</option>
+                            <option value="Date">Date</option>
+                        </select>
+                    </td>
+                    <td><input type="text" name="width_SHOP_DATE" placeholder="Width"></td>
+                    <td><input type="checkbox" name="fields" value="SHOP_DATE"></td>
+                </tr>
+                <tr>
+                    <td>Item Name</td>
+                    <td>
+                        <select name="type_ITEM_NAME">
+                            <option value="String">String</option>
+                            <option value="Integer">Integer</option>
+                            <option value="Date">Date</option>
+                        </select>
+                    </td>
+                    <td><input type="text" name="width_ITEM_NAME" placeholder="Width"></td>
+                    <td><input type="checkbox" name="fields" value="ITEM_NAME"></td>
+                </tr>
+                <tr>
+                    <td>Customer Name</td>
+                    <td>
+                        <select name="type_CUST_NAME">
+                            <option value="String">String</option>
+                            <option value="Integer">Integer</option>
+                            <option value="Date">Date</option>
+                        </select>
+                    </td>
+                    <td><input type="text" name="width_CUST_NAME" placeholder="Width"></td>
+                    <td><input type="checkbox" name="fields" value="CUST_NAME"></td>
+                </tr>
+                <tr>
+                    <td>Mobile No</td>
+                    <td>
+                        <select name="type_MOBILE_NO">
+                            <option value="String">String</option>
+                            <option value="Integer">Integer</option>
+                            <option value="Date">Date</option>
+                        </select>
+                    </td>
+                    <td><input type="text" name="width_MOBILE_NO" placeholder="Width"></td>
+                    <td><input type="checkbox" name="fields" value="MOBILE_NO"></td>
+                </tr>
+                <tr>
+                    <td>Minor</td>
+                    <td>
+                        <select name="type_MINOR">
+                            <option value="String">String</option>
+                            <option value="Integer">Integer</option>
+                            <option value="Date">Date</option>
+                        </select>
+                    </td>
+                    <td><input type="text" name="width_MINOR" placeholder="Width"></td>
+                    <td><input type="checkbox" name="fields" value="MINOR"></td>
+                </tr>
+                <tr>
+                    <td>Quantity</td>
+                    <td>
+                        <select name="type_QUNTITY">
+                            <option value="String">String</option>
+                            <option value="Integer">Integer</option>
+                            <option value="Date">Date</option>
+                        </select>
+                    </td>
+                    <td><input type="text" name="width_QUNTITY" placeholder="Width"></td>
+                    <td><input type="checkbox" name="fields" value="QUNTITY"></td>
+                </tr>
+                <tr>
+                    <td>Pay Amount</td>
+                    <td>
+                        <select name="type_PAY_AMOUNT">
+                            <option value="String">String</option>
+                            <option value="Integer">Integer</option>
+                            <option value="Date">Date</option>
+                        </select>
+                    </td>
+                    <td><input type="text" name="width_PAY_AMOUNT" placeholder="Width"></td>
+                    <td><input type="checkbox" name="fields" value="PAY_AMOUNT"></td>
+                </tr>
+                <tr>
+                    <td>State</td>
+                    <td>
+                        <select name="type_STATE">
+                            <option value="String">String</option>
+                            <option value="Integer">Integer</option>
+                            <option value="Date">Date</option>
+                        </select>
+                    </td>
+                    <td><input type="text" name="width_STATE" placeholder="Width"></td>
+                    <td><input type="checkbox" name="fields" value="STATE"></td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <button type="submit">Generate Report</button>
+    </form>
+</div>
+
+</body>
+</html>

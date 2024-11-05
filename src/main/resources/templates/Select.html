@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Fields for Jasper Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        .form-container {
+            max-width: 400px;
+            margin: auto;
+        }
+        .checkbox-group {
+            margin-bottom: 20px;
+        }
+        .checkbox-group label {
+            display: block;
+            margin: 5px 0;
+        }
+        button {
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            cursor: pointer;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Select Fields for Jasper Report</h2>
+    <form id="fieldSelectionForm">
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="fields" value="dt"> Date</label>
+            <label><input type="checkbox" name="fields" value="itnm"> Item Name</label>
+            <label><input type="checkbox" name="fields" value="custnm"> Customer Name</label>
+            <label><input type="checkbox" name="fields" value="mobile"> Mobile</label>
+            <label><input type="checkbox" name="fields" value="minor"> Minor</label>
+            <label><input type="checkbox" name="fields" value="qty"> Quantity</label>
+            <label><input type="checkbox" name="fields" value="payamt"> Payment Amount</label>
+        </div>
+        <button type="button" onclick="submitFields()">Generate Report</button>
+    </form>
+    <p id="responseMessage"></p>
+</div>
+
+<script>
+function submitFields() {
+    const checkboxes = document.querySelectorAll('input[name="fields"]:checked');
+    const selectedFields = Array.from(checkboxes).map(checkbox => checkbox.value);
+
+    if (selectedFields.length === 0) {
+        document.getElementById("responseMessage").innerText = "Please select at least one field.";
+        return;
+    }
+
+    fetch("/JrxmlGenerator", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ fields: selectedFields }) // Send as an object
+    })
+    .then(response => response.json()) // Expect a JSON response
+    .then(data => {
+        document.getElementById("responseMessage").innerText = data.message; // Access the message field
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        document.getElementById("responseMessage").innerText = "An error occurred while generating the report.";
+    });
+}
+</script>
+
+</body>
+</html>

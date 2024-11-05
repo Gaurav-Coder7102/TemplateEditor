@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Fields</title>
+</head>
+<body>
+    <h1>Select Fields for Report</h1>
+    <form action="/generate-report" method="POST">
+        <label><input type="checkbox" name="fields" value="SHOP_DATE"> Shop Date</label><br>
+        <label><input type="checkbox" name="fields" value="ITEM_NAME"> Item Name</label><br>
+        <label><input type="checkbox" name="fields" value="CUST_NAME"> Customer Name</label><br>
+        <label><input type="checkbox" name="fields" value="MOBILE_NO"> Mobile No</label><br>
+        <label><input type="checkbox" name="fields" value="MINOR"> Minor</label><br>
+        <label><input type="checkbox" name="fields" value="QUNTITY"> Quantity</label><br>
+        <label><input type="checkbox" name="fields" value="PAY_AMOUNT"> Pay Amount</label><br>
+        <label><input type="checkbox" name="fields" value="STATE"> State</label><br><br>
+        
+        <button type="submit">Generate Report</button>
+    </form>
+</body>
+</html>
